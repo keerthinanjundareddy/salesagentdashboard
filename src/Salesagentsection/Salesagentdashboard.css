@@ -1,8 +1,8 @@
 /* ChatApp.css */
 body{
-    background-color:  #e8e3e3 !important;
+    background-color:  #ffffff !important;
     /* height:100vh; */
-    width:100%;
+    /* width:100%; */
   }
   .sidebaropen {
     width: 20%;
@@ -32,7 +32,7 @@ body{
       display: flex;
       height:80vh;
       padding-top:10vh ;
-      background-color: #e8e3e3;
+      background-color: #ffffff;
       /* padding-left: 40px; */
       /* padding-right: 40px; */
       word-wrap: break-word;
@@ -63,8 +63,8 @@ body{
       border-radius: 8px;
       /* padding: 10px; */
       /* margin: 5px 0; */
-      border:1px solid white;
-      background-color: #ffffff;
+      /* border:1px solid white; */
+      /* background-color: #ffffff; */
     
 
      
@@ -129,15 +129,15 @@ body{
     
     .message {
       /* background-color: #f0f0f0; */
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+      /* justify-content: center; */
+      /* align-items: center; */
+      /* text-align: center; */
       border-radius: 8px;
-      padding: 10px;
-      margin: 10px auto;
+      /* padding: 10px; */
+      /* margin: 10px 0px; */
       /* margin-left: 10px; */
       /* margin-right: 20px !important; */
-      width: 80%; /* Makes each message div 100% width */
+      width: 100%; /* Makes each message div 100% width */
       word-wrap: break-word; /* Allows text to wrap within the div */
     }
     
@@ -237,12 +237,23 @@ body{
       display: flex;
       flex-direction: row;
       gap:40px;
+      padding-left: 10%;
+      padding-right: 10%;
+      padding-top: 10px;
+      padding-bottom: 10px;
       /* border:1px solid blue; */
     }
     .user-parent-output-div{
       display: flex;
       flex-direction: row;
       gap:40px;
+      padding-left: 10%;
+      padding-right: 10%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-top: 1px solid rgb(247,247,248);
+      border-bottom: 1px solid rgb(247,247,248);
+      background-color: rgb(247,247,248);
       /* border:1px solid blue; */
     }
     .user-timestamp-parent-div{
@@ -353,7 +364,7 @@ body{
 
     @media (max-width: 400px) {
       .message {
-        max-width: 99%; /* Set a maximum width for messages on smaller screens */
+        max-width: 100%; /* Set a maximum width for messages on smaller screens */
       }
       .navbar {
         width: 100%;
@@ -369,8 +380,8 @@ body{
       }
 
       .sidebaropen {
-        width: 11%;
-        background-color: #333;
+        width: 10%;
+        background-color: #212121;
         color: white;
         position: fixed;
         top: 0;
@@ -384,7 +395,7 @@ body{
 
         margin-top: 0px;
         width: 80%;
-        background-color: #333;
+        background-color: #212121;
         color: white;
         position: fixed;
         top: 0;
@@ -427,7 +438,7 @@ body{
         overflow-y: auto;
         display: flex;
         flex-direction: column;
-        margin-left:0% ;
+        margin-left:0% !important ;
         /* margin-right: 2%; Ensures messages stack vertically */
       }
       .hamburgerdisappearingicon{
@@ -449,7 +460,7 @@ body{
         display: flex;
         height:80vh;
         padding-top:10vh ;
-        background-color: #e8e3e3;
+        background-color: #ffffff;
         /* padding-left: 20px; */
         /* padding-right: 20px; */
         word-wrap: break-word;

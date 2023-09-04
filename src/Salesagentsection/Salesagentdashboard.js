@@ -108,11 +108,11 @@ function Chatbotapistwo() {
         </div>
       </div>
 
-      <div className="chat-app">
-        <div className="chat">
-          <div className="message-list" ref={messageListRef}>
+      <div className="chat-app" >
+        <div className="chat"  >
+          <div className="message-list" ref={messageListRef}  >
             {messages.map((message, index) => (
-              <div key={index} className="message">
+              <div key={index} className="message" >
                 <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
                   <div className='user-parent-div'>
                     <div className='user-timestamp-parent-div'>
