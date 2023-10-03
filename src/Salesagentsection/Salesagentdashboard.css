@@ -1,12 +1,19 @@
 /* ChatApp.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Sora&display=swap');
 body{
     background-color:  #ffffff !important;
+    font-family: 'Sora', sans-serif;
     /* height:100vh; */
     /* width:100%; */
   }
+  ::placeholder {
+  color: #000000 !important;
+  font-family:'Sora', sans-serif ;
+  font-weight: 400;
+}
   .sidebaropen {
-    width: 20%;
-    background-color: #212121;
+    width: 19%;
+    background-color: #02080A;
     color: white;
     position: fixed;
     top: 0;
@@ -15,10 +22,18 @@ body{
     overflow-y: auto;
     word-wrap: break-word; /* Add this line */
 }
+.chat-title {
+  /* padding-left: 50px;
+   */
+   cursor: pointer;
+}
+.document-text{
+  font-weight: 600;
+}
   .sidebarclose{
 
-    width: 20%;
-    background-color:#212121;
+    width: 19%;
+    background-color:#02080A;
     color: white;
     position: fixed;
     top: 0;
@@ -31,7 +46,7 @@ body{
   .chat-app {
       display: flex;
       height:80vh;
-      padding-top:10vh ;
+      padding-top:7vh ;
       background-color: #ffffff;
       /* padding-left: 40px; */
       /* padding-right: 40px; */
@@ -97,14 +112,16 @@ body{
     input[type="text"] {
       flex: 1;
       padding: 15px;
-      border: 1px solid #ccc;
+      border: 1px solid #EBEBEB;
       border-radius: 8px;
+      background-color: #EBEBEB;
+  
       /* margin: 10px auto; */
       /* margin-right: 10px; */
     }
     
     button {
-      background-color:#FF4364;
+      background-color:#0B303B;
       color: white;
       border: none;
       border-radius: 8px;
@@ -124,7 +141,7 @@ body{
       overflow-y: auto;
       display: flex;
       flex-direction: column;
-      margin-left:20% ; 
+      margin-left:18% ; 
       /* margin-right: 2%;Ensures messages stack vertically */
     }
     
@@ -182,10 +199,10 @@ body{
       left: 0;
       width: 100%;
       /* height: 8vh; */
-      background-color: white;
+      background-color:#FAFAFA;
       color: black;
       /* padding: 10px 10px !important; */
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); */
       z-index: 100; /* Ensure the navbar is above other elements */
       /* text-align: center; */
       /* color: pink; */
@@ -195,8 +212,10 @@ body{
       align-items: center;
       padding-top: 10px;
       padding-bottom: 10px;
+      box-shadow: 0 0.15px 0 0 #21261B;
+      /* border-bottom: 0.1px solid #21261B; */
       
-     
+     height:6vh;
       /* padding-left: 20px; */
     }
     .navbar-focused {
@@ -222,8 +241,9 @@ body{
       /* border:1px solid blue; */
     }
     .new-chat-div{
-      border:1px solid #FF4364;
-      color: #FF4364;
+      border:1px solid #CED6D8;
+      color: #0B303B;
+      background-color: #CED6D8;
       border-radius: 10px;
       /* padding: 10px; */
       padding-left: 20px;
@@ -237,24 +257,25 @@ body{
     .user-parent-div{
       display: flex;
       flex-direction: row;
-      gap:40px;
+      /* gap:40px; */
       padding-left: 10%;
       padding-right: 10%;
       padding-top: 10px;
       padding-bottom: 10px;
+      background-color:#FAFAFA ;
       /* border:1px solid blue; */
     }
     .user-parent-output-div{
       display: flex;
       flex-direction: row;
-      gap:40px;
+      /* gap:40px; */
       padding-left: 10%;
       padding-right: 10%;
       padding-top: 10px;
       padding-bottom: 10px;
       border-top: 1px solid rgb(247,247,248);
       border-bottom: 1px solid rgb(247,247,248);
-      background-color: rgb(247,247,248);
+      background-color:  #EBEBEB;
       /* border:1px solid blue; */
     }
     .user-timestamp-parent-div{
@@ -269,28 +290,53 @@ body{
   
     }
     .user-name-div{
-      font-size: 1.0em;
+      font-size: 10px;
+      font-weight: 400;
       color: black;
+      border:1px solid #F0F0F0;
+      background-color:#F0F0F0;
+      border-radius: 5px;
+      text-align: center;
+      padding:8px;
     }
     .user-time-div{
       font-size: 0.6em;
-      color: gray;
+      color: #818181;
+     
+        white-space: nowrap; /* Prevent text from wrapping */
+        overflow: hidden; /* Hide overflow content if it doesn't fit */
+        text-overflow: ellipsis; /* Show ellipsis (...) if text overflows */
+        /* Add any additional styles you want */
+      
+      
     }
     .chatbot-name-div{
-      font-size: 0.8em;
-      color:rgb(240, 58, 88);
+      font-size: 10px;
+      font-weight: 400;
+      color: black;
+      border:1px solid #3E4733;
+      background-color:#3E4733;
+      border-radius: 5px;
+      text-align: center;
+      padding:8px;
+      color:white;
     }
     .chatbot-time-div{
       font-size: 0.6em;
-      color: gray;
+      color: #818181;
+      white-space: nowrap; /* Prevent text from wrapping */
+      overflow: hidden; /* Hide overflow content if it doesn't fit */
+      text-overflow: ellipsis;
     }
     .user-question-div{
       font-size: 1.2em;
       color: black;
+      padding-left: 50px;
     }
     .chatbot-output-div{
       font-size: 1.2em;
       color: black;
+      padding-left: 50px;
     }
     .chat-name-div{
       /* border:1px solid pink; */
@@ -303,10 +349,10 @@ body{
     }
     /* Add this to your existing CSS for sidebar styling */
 .sidebar-content {
-  padding-top: 80px;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color:#212121;
+  padding-top: 100px;
+  /* padding-left: 10px; */
+  /* padding-right: 10px; */
+  background-color:#02080A;
   color: white;
   display: flex;
   flex-direction: column;
@@ -356,12 +402,37 @@ body{
 .toggle-sidebar-button.open {
   transform: rotate(180deg); /* Rotate the button when the sidebar is open */
 }
-.sidebar-content ul li{
+/* .sidebar-content ul li{
   list-style-type: square;
   
+} */
+
+/* .chat-first-inner-parent-div{
+ display:flex;
+ flex-direction:row;
+ gap:10px;
+ display:block;
+} */
+/* .input:focus{
+  border:none !important;
+  outline:none !important
+} */
+.sidebar-content {
+  list-style-type: none; /* Remove default list style */
+  /* padding-left: 20px; Adjust the left padding to create space for the bullet marker */
+}
+.sidebar-content ul li {
+  list-style-type: none;
+}
+.sidebar-content  li:before {
+  content: "•"; 
+  margin-right: 10px;/* Add a bullet-like marker */
+  /* margin-right: 10px; Adjust the spacing between the marker and the list item text */
 }
 
-
+.nav-topsec{
+  justify-content: center;
+}
 
     @media (max-width: 400px) {
       .message {
@@ -374,7 +445,14 @@ body{
     }
 
 
-    @media (max-width: 600px) {
+    @media (max-width: 767px) {
+      .nav-topsec{
+        justify-content: space-between;
+      }
+      
+      .chat-title {
+        padding-left: 0px;
+      }
       .sidebaropen {
         display: none;
          /* Hide the sidebar completely on mobile screens */
@@ -382,7 +460,7 @@ body{
 
       .sidebaropen {
         width: 10%;
-        background-color: #212121;
+        background-color: #02080A;
         color: white;
         position: fixed;
         top: 0;
@@ -396,7 +474,7 @@ body{
 
         margin-top: 0px;
         width: 80%;
-        background-color: #212121;
+        background-color: #02080A;
         color: white;
         position: fixed;
         top: 0;
@@ -449,7 +527,7 @@ body{
         padding-top: 0px;
         padding-left: 10px;
         padding-right: 10px;
-        background-color:#212121;
+        background-color:#02080A;
         color: white;
         display: flex;
         flex-direction: column;
@@ -460,7 +538,7 @@ body{
       .chat-app {
         display: flex;
         height:80vh;
-        padding-top:10vh ;
+        padding-top:8vh ;
         background-color: #ffffff;
         /* padding-left: 20px; */
         /* padding-right: 20px; */
@@ -470,11 +548,13 @@ body{
       .button:active{
         background-color: red !important;
       }
+      .inner-chat-paarent-div{
+        display: none !important;
+      }
       
-
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 767px) {
       .sidebaropen {
         left: 0; /* Display the sidebar on the left side of the screen */
         display: block;
@@ -501,6 +581,7 @@ body{
     .new-chat-div{
       cursor: pointer;
     }
+   
     }
     
     
